@@ -1,0 +1,254 @@
+/* importing google font-inter*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", serif;
+}
+
+body{
+    width: 100%;   
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(black,white);
+}
+
+.chatbot-popup{
+    position: relative;
+    background-color: white;
+    width: 520px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+    0 32px 64px -48px rgba(0,0,0,0.5);
+
+}
+
+.chatbot-popup .chatbot-header{
+   background-color: bisque; 
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 15px 22px;
+}
+
+.chatbot-header .chatbot-info{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+   
+
+}
+
+.chatbot-info svg{
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+    height: 35px;
+    width: 35px;
+    fill: bisque;
+    flex-shrink: 0;
+}
+
+.chatbot-info .logo-text{
+    color: black;
+    font-size: 1.31rem;
+    font-weight: 600;
+}
+
+.chatbot-header button{
+    height: 30px;
+    width:30px;
+    padding-top: 2px;
+    padding-right: -10px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 1.9rem;
+    color: rgb(1, 0, 0);
+    background-color: none;
+    transition: 0.5s;
+}
+
+.chatbot-header button:hover{
+    background-color: rgb(152, 135, 114);
+}
+
+.message-body{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 25px 22px;
+    height: 460px;
+    overflow-y:auto ;
+    scrollbar-width: thin;
+    scrollbar-color: black transparent;
+    margin-bottom: 82px;
+}
+
+.message-body .message{
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+}
+
+.message-body .body-message svg{
+    background-color: bisque;
+    border-radius: 50%;
+    padding: 5px;
+    height: 35px;
+    width: 35px;
+    fill: rgb(255, 255, 255);
+    align-self: flex-end;
+    flex-shrink: 0;
+    margin-bottom: 2px;
+}
+
+.message-body .message .message-text{
+  
+    max-width: 75%;
+    padding: 12px 16px;
+    word-wrap: break-word;
+    white-space: pre-line;
+    font-size: 0.9rem;
+}
+
+.message-body .body-message .message-text{
+    background: rgba(255, 228, 196, 0.315);
+    border-radius: 13px;
+    
+}
+.message-body .user-message{
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.message-body .user-message .message-text{
+    background: burlywood;
+    color: white;
+    border-radius: 13px 13px 3px 13px;
+    
+}
+.message-footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    padding: 15px 22px 20px;
+}
+
+.message-footer .user-form:focus-within{
+    outline: 2px solid black;
+}
+
+
+.message-footer .user-form{
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 8px rgba(0,0,0,0.6px);
+    background-color: rgb(255, 255, 255);
+    outline: 1px solid black;
+    border-radius: 32px;
+    
+}
+
+.user-form .message-input{
+    border: none;
+    outline: none;
+    width: 100%;
+    background: none;
+    height: 47px;
+    padding: 0 17px;
+    font-size: 0.95rem;
+}
+
+.user-form button{
+    height: 35px;
+    width: 35px;
+    border: none;
+    display:none;
+    border-radius: 50%;
+    flex-shrink: 0;
+    color: white;
+    border: none;
+    outline: none;
+    margin-right: 0.5rem;
+    transition: 0.5s;
+}
+
+.user-form button:hover{
+    background: rgba(120, 106, 89, 0.521);
+}
+
+.user-form .message-input:valid ~button{
+    display: block;
+}
+
+/* main page*/
+.main-text{
+    font-size: 100px;
+    margin-right: 250px;
+}
+
+nav li{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    
+}
+
+.land-nav{
+    display: flex;
+    list-style-type:none;
+    gap: 3rem;
+    margin-top: 2rem;
+
+}
+
+.land-nav .first{
+    background-color: black;
+    height: 50px;
+    border-radius: 20px;
+    padding: 1rem;
+    justify-content: center;
+    color: white;
+}
+
+.land-nav .second{
+    background-color: black;
+    height: 50px;
+    border-radius: 20px;
+    padding: 1rem;
+    justify-content: center;
+    color: white;
+}
+
+.land-nav .third{
+    background-color: black;
+    height: 50px;
+    border-radius: 20px;
+    padding: 1rem;
+    justify-content: center;
+    color: white;
+
+}
+:any-link:focus{
+    color: blue;
+
+}
+
+.signin-btn{
+    background-color: black;
+    border: none;
+    color: white;
+    height: 50px;
+    width: 80px;
+    border-radius: 10px;
+}
